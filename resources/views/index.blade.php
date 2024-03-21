@@ -15,7 +15,7 @@
             </div><br />
         @endif
 
-        <p>Total: {{ $book -> count() }}</p>
+{{--        <p>Total: {{ $book -> count() }}</p>--}}
 
         <br>
 
@@ -25,7 +25,7 @@
                 <button hidden type="submit"></button><br>
             </form>
             <thead>
-            <tr class="table-warning">
+            <tr class="table-warning" style="text-align: center">
                 <td>ISBN</td>
                 <td>Image</td>
                 <td>Price</td>
@@ -34,7 +34,7 @@
             </thead>
             <tbody>
             @foreach($book as $row)
-                <tr>
+                <tr style="text-align: center">
                     <td>{{$row->isbn}}</td>
                     <td><img src="{{$row->img}}" alt="404" width="50px" height="50px"></td>
                     <td>{{$row->price}}</td>

@@ -27,7 +27,7 @@ class BookController extends Controller
                 -> orWhere('author', 'like', '%'.$keyword.'%')
                 -> paginate();
         } else {
-            $book = BookManagement::paginate(2);
+            $book = BookManagement::paginate(3);
         }
 
         return view('index', compact('book'));
